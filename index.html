@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular Medicina</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f9;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c3e50;
+    }
+    .malla {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .semestre {
+      background-color: #ffffff;
+      border-radius: 10px;
+      padding: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      min-width: 220px;
+    }
+    .semestre h2 {
+      text-align: center;
+      background-color: #2980b9;
+      color: white;
+      border-radius: 8px;
+      padding: 8px 0;
+    }
+    .materia {
+      background-color: #ecf0f1;
+      border: 2px solid #3498db;
+      border-radius: 8px;
+      padding: 8px;
+      margin: 10px 0;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .materia:hover {
+      background-color: #d6ecfa;
+    }
+    .info {
+      display: none;
+      font-size: 0.85em;
+      margin-top: 6px;
+      color: #555;
+    }
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.8em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>Malla Curricular Medicina</h1>
+  <div class="malla">
+    <div class="semestre">
+      <h2>Semestre 1</h2>
+      <div class="materia" onclick="toggleInfo(this)">
+        Biología Celular
+        <div class="info">
+          Prerrequisitos: Ninguno<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Bioquímica
+        <div class="info">
+          Prerrequisitos: Ninguno<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Biofísica
+        <div class="info">
+          Prerrequisitos: Ninguno<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Responsabilidad Profesional
+        <div class="info">
+          Prerrequisitos: Ninguno<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Sociología
+        <div class="info">
+          Prerrequisitos: Ninguno<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Reanimación y Atención Prehospitalaria
+        <div class="info">
+          Prerrequisitos: Ninguno<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Sistemas de Salud Pública
+        <div class="info">
+          Prerrequisitos: Ninguno<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Práctica Comunitaria
+        <div class="info">
+          Prerrequisitos: Ninguno<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Filosofía Sanmartiniana / Métodos de Estudio
+        <div class="info">
+          Prerrequisitos: Ninguno<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Epistemología
+        <div class="info">
+          Prerrequisitos: Ninguno<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Estadística
+        <div class="info">
+          Prerrequisitos: Ninguno<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre 2</h2>
+      <div class="materia" onclick="toggleInfo(this)">
+        Morfología
+        <div class="info">
+          Prerrequisitos: Biofísica, Biología Celular, Bioquímica, Reanimación y Atención Prehospitalaria<br>
+          Correquisitos: Semiología General, Técnicas de Enfermería I
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Antropología
+        <div class="info">
+          Prerrequisitos: Reanimación y Atención Prehospitalaria, Responsabilidad Profesional, Sociología<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Semiología General
+        <div class="info">
+          Prerrequisitos: Biofísica, Biología Celular, Bioquímica, Reanimación y Atención Prehospitalaria<br>
+          Correquisitos: Morfología
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Técnicas de Enfermería I
+        <div class="info">
+          Prerrequisitos: Reanimación y Atención Prehospitalaria, Sociología<br>
+          Correquisitos: Morfología
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Salud Familiar y Comunitaria
+        <div class="info">
+          Prerrequisitos: Práctica Comunitaria, Sistemas de Salud Pública<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Ética / Historia de la Medicina
+        <div class="info">
+          Prerrequisitos: Estadística, Epistemología, Filosofía Sanmartiniana / Métodos de Estudio<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Metodología de la Investigación
+        <div class="info">
+          Prerrequisitos: Estadística, Epistemología, Filosofía Sanmartiniana / Métodos de Estudio<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Epidemiología
+        <div class="info">
+          Prerrequisitos: Estadística, Epistemología, Filosofía Sanmartiniana / Métodos de Estudio<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Curso Flexible I
+        <div class="info">
+          Prerrequisitos: Biofísica, Biología Celular, Bioquímica<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre 3</h2>
+      <div class="materia" onclick="toggleInfo(this)">
+        Fisiología / Farmacología Básica
+        <div class="info">
+          Prerrequisitos: Morfología, Semiología General, Técnicas de Enfermería I<br>
+          Correquisitos: Semiología General II, Genética
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Ética
+        <div class="info">
+          Prerrequisitos: Antropología, Semiología General, Técnicas de Enfermería I<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Semiología General II
+        <div class="info">
+          Prerrequisitos: Morfología, Semiología General, Sociología, Antropología, Técnicas de Enfermería I<br>
+          Correquisitos: Fisiología / Farmacología Básica
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Técnicas de Enfermería II
+        <div class="info">
+          Prerrequisitos: Morfología, Semiología General, Antropología, Técnicas de Enfermería I<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Genética
+        <div class="info">
+          Prerrequisitos: Morfología, Salud Familiar y Comunitaria<br>
+          Correquisitos: Fisiología / Farmacología Básica
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Psicología
+        <div class="info">
+          Prerrequisitos: Salud Familiar y Comunitaria<br>
+          Correquisitos: Fisiología / Farmacología Básica
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Salud y Desarrollo
+        <div class="info">
+          Prerrequisitos: Salud Familiar y Comunitaria<br>
+          Correquisitos: Fisiología / Farmacología Básica
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Modelos de Investigación
+        <div class="info">
+          Prerrequisitos: Epidemiología, Ética / Historia de la Medicina, Metodología de la Investigación<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Historia de la Medicina
+        <div class="info">
+          Prerrequisitos: Epidemiología, Epistemología, Ética / Historia de la Medicina, Metodología de la Investigación<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Curso Flexible II
+        <div class="info">
+          Prerrequisitos: Curso Flexible I<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre 4</h2>
+      <div class="materia" onclick="toggleInfo(this)">
+        Microbiología / Patología / Farmacología
+        <div class="info">
+          Prerrequisitos: Fisiología / Farmacología Básica, Semiología General II, Técnicas de Enfermería II<br>
+          Correquisitos: Semiología III, Nutrición y Metabolismo, Crecimiento y Desarrollo
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Semiología III
+        <div class="info">
+          Prerrequisitos: Ética, Fisiología / Farmacología Básica, Semiología General II, Técnicas de Enfermería II<br>
+          Correquisitos: Microbiología / Patología / Farmacología
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Psicopatología
+        <div class="info">
+          Prerrequisitos: Ética, Psicología, Semiología General II, Técnicas de Enfermería II<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Medicina Preventiva
+        <div class="info">
+          Prerrequisitos: Ética, Semiología General II<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Nutrición y Metabolismo
+        <div class="info">
+          Prerrequisitos: Fisiología / Farmacología Básica, Genética, Salud y Desarrollo, Semiología General II, Psicología<br>
+          Correquisitos: Microbiología / Patología / Farmacología
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Crecimiento y Desarrollo
+        <div class="info">
+          Prerrequisitos: Fisiología / Farmacología Básica, Genética, Salud y Desarrollo, Semiología General II, Psicología<br>
+          Correquisitos: Microbiología / Patología / Farmacología
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Legislación en Salud
+        <div class="info">
+          Prerrequisitos: Genética, Salud y Desarrollo, Psicología<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Directrices de Investigación
+        <div class="info">
+          Prerrequisitos: Estadística, Epidemiología, Epistemología, Ética / Historia de la Medicina, Filosofía Sanmartiniana / Métodos de Estudio, Historia de la Medicina, Metodología de la Investigación, Modelos de Investigación<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Curso Flexible III
+        <div class="info">
+          Prerrequisitos: Curso Flexible II<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre 5</h2>
+      <div class="materia" onclick="toggleInfo(this)">
+        Esquemas Clínicos Fundamentales
+        <div class="info">
+          Prerrequisitos: Todo Cuarto Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Correlación Básico Clínica I
+        <div class="info">
+          Prerrequisitos: Todo Cuarto Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Práctica Clínica Ambulatoria
+        <div class="info">
+          Prerrequisitos: Todo Cuarto Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Investigación I
+        <div class="info">
+          Prerrequisitos: Todo Cuarto Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre 6</h2>
+      <div class="materia" onclick="toggleInfo(this)">
+        Esquemas Clínicos Fundamentales II
+        <div class="info">
+          Prerrequisitos: Todo Quinto Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Correlación Básico Clínica II
+        <div class="info">
+          Prerrequisitos: Todo Quinto Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Práctica Clínica Ambulatoria II
+        <div class="info">
+          Prerrequisitos: Todo Quinto Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Investigación II
+        <div class="info">
+          Prerrequisitos: Todo Quinto Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre 7</h2>
+      <div class="materia" onclick="toggleInfo(this)">
+        Esquemas Clínicos Fundamentales III
+        <div class="info">
+          Prerrequisitos: Todo Sexto Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Práctica Clínica Hospitalaria
+        <div class="info">
+          Prerrequisitos: Todo Sexto Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Planeación en Salud
+        <div class="info">
+          Prerrequisitos: Todo Sexto Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Investigación III
+        <div class="info">
+          Prerrequisitos: Todo Sexto Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre 8</h2>
+      <div class="materia" onclick="toggleInfo(this)">
+        Esquemas Clínicos Fundamentales IV
+        <div class="info">
+          Prerrequisitos: Todo Séptimo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Práctica Clínica Hospitalaria II
+        <div class="info">
+          Prerrequisitos: Todo Séptimo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Planeación en Salud II
+        <div class="info">
+          Prerrequisitos: Todo Séptimo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Investigación IV
+        <div class="info">
+          Prerrequisitos: Todo Séptimo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre 9</h2>
+      <div class="materia" onclick="toggleInfo(this)">
+        Clínica Avanzada y Especializada
+        <div class="info">
+          Prerrequisitos: Todo Octavo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Electiva I
+        <div class="info">
+          Prerrequisitos: Todo Octavo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Planeación en Salud III
+        <div class="info">
+          Prerrequisitos: Todo Octavo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Investigación V
+        <div class="info">
+          Prerrequisitos: Todo Octavo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre 10</h2>
+      <div class="materia" onclick="toggleInfo(this)">
+        Clínica Avanzada y Especializada Quirúrgica
+        <div class="info">
+          Prerrequisitos: Todo Noveno Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Electiva II
+        <div class="info">
+          Prerrequisitos: Todo Noveno Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Investigación VI
+        <div class="info">
+          Prerrequisitos: Todo Noveno Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Medicina Legal
+        <div class="info">
+          Prerrequisitos: Todo Noveno Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre 11</h2>
+      <div class="materia" onclick="toggleInfo(this)">
+        Pediatría
+        <div class="info">
+          Prerrequisitos: Todo Décimo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Ginecoobstetricia
+        <div class="info">
+          Prerrequisitos: Todo Décimo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Cirugía
+        <div class="info">
+          Prerrequisitos: Todo Décimo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Medicina Interna
+        <div class="info">
+          Prerrequisitos: Todo Décimo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Urgencias
+        <div class="info">
+          Prerrequisitos: Todo Décimo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+    </div>
+    <div class="semestre">
+      <h2>Semestre 12</h2>
+      <div class="materia" onclick="toggleInfo(this)">
+        Electiva
+        <div class="info">
+          Prerrequisitos: Todo Undécimo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Hospital Nivel I
+        <div class="info">
+          Prerrequisitos: Todo Undécimo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+      <div class="materia" onclick="toggleInfo(this)">
+        Hospital Nivel II
+        <div class="info">
+          Prerrequisitos: Todo Undécimo Semestre<br>
+          Correquisitos: Ninguno
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <footer>
+    Malla creada por Santiago | Proyecto académico personal
+  </footer>
+  <script>
+    function toggleInfo(el) {
+      const info = el.querySelector('.info');
+      info.style.display = info.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
